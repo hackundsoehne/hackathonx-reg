@@ -1,0 +1,16 @@
+/** BRANDING COLORS
+ * primary (default pink): sidebar color, admitted dashboard status
+ * secondary (default purple): header text, submitted/confirmed/checked-in dashboard status
+ * tertiary (default blue): waitlist/declined dashboard status
+ */
+
+// $primary: #e76482;
+$primary: #0f0f0f;
+$secondary: #A63324;
+$tertiary: #4c82cc;
+
+/** ASSET URLS
+ * login-bg: image for login splash page 
+ */
+
+$login-bg: url('../assets/images/background.jpg');

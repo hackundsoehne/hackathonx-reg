@@ -1,0 +1,51 @@
+version: '2'
+services:
+  web:
+    restart: always
+    build: .
+    container_name: quill
+    ports:
+     - "3000:3000"
+     - "5858:5858"
+     - "8080:8080"
+     - "35729:35729"
+    environment:
+     - NODE_ENV=dev
+     - DATABASE=db
+     - PORT=3000
+     - JWT_SECRET=shhhh super secret code here bro
+     - ROOT_URL=http://localhost:3000
+     - ADMIN_EMAIL=
+     - ADMIN_PASS=
+     - EMAIL_CONTACT=
+     - EMAIL_HOST=
+     - EMAIL_USER=
+     - EMAIL_PASS=
+     - EMAIL_PORT=
+     - EMAIL_HEADER_IMAGE=/assets/images/header.svg
+    depends_on:
+     - db
+    volumes_from:
+     - web-data
+  web-data:
+    build: .
+    entrypoint: /bin/true
+    volumes:
+     - ./:/opt/mean.js
+     - /opt/mean.js/node_modules
+     - /opt/mean.js/public
+     - /opt/mean.js/uploads
+  db:
+    image: mongo:3.2
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes_from:
+      - db-data
+  db-data:
+    image: mongo:3.2
+    volumes:
+      - /data/db
+      - /var/lib/mongodb
+      - /var/log/mongodb
+    entrypoint: /bin/true

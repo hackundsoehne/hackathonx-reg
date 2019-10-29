@@ -1,0 +1,29 @@
+TODO: 
+- Docker-compose
+    - Put a JWT secret 
+    - Put a new AdminPassword
+    - Turn to Production mode
+
+
+## TEXTE für Dashboard -> Set in Admin interface
+
+Waitlist text
+
+Hey there,
+we have received your application for the hackathon x!
+You will receive an Email in the coming weeks, informing you whether you have been accepted or not.
+
+=============================================================================================
+
+Acceptance text
+
+Yay! You've been accepted for the hackathon x! Please confirm you attendance by clicking the button below and filling out the remaining details. We're looking forward to meeting you here in Karlsruhe. 
+
+
+=============================================================================================
+
+Confirmation text
+
+You admission is confirmed! We're looking forward to see you at the hackathon. 
+If you can't make it, please let us know by pressing the button below or sending an email. 
+=============================================================================================
