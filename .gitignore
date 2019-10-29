@@ -1,0 +1,17 @@
+# Project
+db/
+node_modules/
+semantic/
+
+# The uploads folder
+uploads/
+
+# Output
+app/client/build/
+
+# macOS
+.DS_Store
+.python-version
+
+# vim
+tags
